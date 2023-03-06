@@ -6,27 +6,9 @@ const ExpenseForm = (props) => {
 	const [enteredTitle, setEnterTitle] = useState("");
 	const [enteredAmount, setEnteredAmount] = useState("");
 	const [enteredDate, setEnteredDate] = useState("");
-	// const [userInput, setUserInput] = useState({
-	// 	enteredTitle: "",
-	// 	enteredAmount: "",
-	// 	enteredDate: "",
-	// });
 
 	const titleChangeHandler = (e) => {
 		setEnterTitle(e.target.value);
-
-		// setUserInput({
-		// 	...userInput,
-		// 	enteredTitle: e.target.value,
-		// });
-
-		// Rule: Whenever you update your state and depend on previous state following is better:
-		// setUserInput((prevState) => {
-		// 	return {
-		// 		...prevState,
-		// 		enteredTitle: e.target.value,
-		// 	};
-		// });
 	};
 
 	const amountChangeHandler = (e) => {
@@ -71,6 +53,9 @@ const ExpenseForm = (props) => {
 				</div>
 			</div>
 			<div className="new-expense__actions">
+				<button type="button" onClick={props.onCancel}>
+					Cancel
+				</button>
 				<button type="submit">Add Expense</button>
 			</div>
 		</form>
