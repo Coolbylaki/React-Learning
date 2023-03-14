@@ -1,16 +1,13 @@
 import Card from "./components/UI/Card/Card";
+import Button from "./components/UI/Button/Button";
 
 function App() {
 	return (
-		<div>
-			<Card>
-				<h1>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi blanditiis explicabo perspiciatis ipsum porro
-					numquam, nostrum in debitis illum obcaecati corrupti cumque repudiandae, laudantium itaque facere optio
-					voluptas tenetur. Molestias?
-				</h1>
-			</Card>
-		</div>
+		<Card>
+			<h1>Do you want to hear a joke?</h1>
+
+			<Button>Get Joke</Button>
+		</Card>
 	);
 }
 
