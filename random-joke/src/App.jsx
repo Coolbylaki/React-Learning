@@ -1,14 +1,7 @@
-import Card from "./components/UI/Card/Card";
-import Button from "./components/UI/Button/Button";
+import Joke from "./components/Joke/Joke";
 
 function App() {
-	return (
-		<Card>
-			<h1>Do you want to hear a joke?</h1>
-
-			<Button>Get Joke</Button>
-		</Card>
-	);
+	return <Joke></Joke>;
 }
 
 export default App;

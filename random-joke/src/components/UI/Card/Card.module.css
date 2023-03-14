@@ -9,3 +9,9 @@
 	border-radius: 0.5rem;
 	padding: 1rem;
 }
+
+@media screen and (min-width: 1200px) {
+	.card {
+		max-width: 50%;
+	}
+}
