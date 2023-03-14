@@ -1,0 +1,10 @@
+.card {
+	margin: 5rem auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	max-width: 80%;
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
