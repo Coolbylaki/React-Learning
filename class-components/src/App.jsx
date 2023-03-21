@@ -1,11 +1,11 @@
 import { Component, Fragment } from "react";
-import Users from "./components/Users";
+import UserFinder from "./components/UserFinder";
 
 class App extends Component {
 	render() {
 		return (
 			<Fragment>
-				<Users />
+				<UserFinder />
 			</Fragment>
 		);
 	}
