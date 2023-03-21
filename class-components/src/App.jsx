@@ -1,12 +1,14 @@
-import { Fragment } from "react";
+import { Component, Fragment } from "react";
 import Users from "./components/Users";
 
-function App() {
-	return (
-		<Fragment>
-			<Users />
-		</Fragment>
-	);
+class App extends Component {
+	render() {
+		return (
+			<Fragment>
+				<Users />
+			</Fragment>
+		);
+	}
 }
 
 export default App;
