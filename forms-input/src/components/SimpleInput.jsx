@@ -3,8 +3,8 @@ import { useState } from "react";
 const SimpleInput = (props) => {
 	const [enteredName, setEnteredName] = useState("");
 	const [enteredNameTouched, setEnteredNameTouched] = useState(false);
-	const [enteredEmailTouched, setEnteredEmailTouched] = useState(false);
 	const [enteredEmail, setEnteredEmail] = useState("");
+	const [enteredEmailTouched, setEnteredEmailTouched] = useState(false);
 
 	const enteredEmailIsValid =
 		enteredEmail.trim() !== "" && enteredEmail.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
@@ -66,7 +66,7 @@ const SimpleInput = (props) => {
 					onChange={nameInputChangeHandler}
 					onBlur={nameInputBlurHandler}
 				/>
-				{nameInputIsInvalid && <p className="error-text">Name must not be empty</p>}
+				{nameInputIsInvalid && <p className="error-text">Name must not be empty.</p>}
 			</div>
 			<div className={emailInputClasses}>
 				<label htmlFor="email">Your Email</label>
@@ -77,7 +77,7 @@ const SimpleInput = (props) => {
 					onChange={emailInputChangeHandler}
 					onBlur={emailInputBlurHandler}
 				/>
-				{emailInputIsInvalid && <p className="error-text">Email must be correct</p>}
+				{emailInputIsInvalid && <p className="error-text">Please enter a valid email.</p>}
 			</div>
 			<div className="form-actions">
 				<button disabled={!formIsValid}>Submit</button>
