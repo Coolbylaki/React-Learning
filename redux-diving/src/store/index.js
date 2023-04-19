@@ -39,7 +39,7 @@ const authSlice = createSlice({
 const store = configureStore({
 	reducer: {
 		counter: counterSlice.reducer,
-		auth: authSlice,
+		auth: authSlice.reducer,
 	},
 });
 
