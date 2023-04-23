@@ -6,10 +6,11 @@ import { useSelector } from "react-redux";
 
 function App() {
 	const isCartVisible = useSelector((state) => state.ui.cartIsVisible);
+	const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
 	return (
 		<Layout>
-			{isCartVisible && <Cart />}
+			{isCartVisible && totalQuantity > 0 && <Cart />}
 			<Products />
 		</Layout>
 	);
