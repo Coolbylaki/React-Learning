@@ -6,6 +6,8 @@ import { useEffect, Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { uiActions } from "./store/ui-slice";
 
+let isInitial = true;
+
 function App() {
 	const dispatch = useDispatch();
 
@@ -43,6 +45,11 @@ function App() {
 				})
 			);
 		};
+
+		if (isInitial) {
+			isInitial = false;
+			return;
+		}
 
 		sendCartData().catch(() => {
 			dispatch(
