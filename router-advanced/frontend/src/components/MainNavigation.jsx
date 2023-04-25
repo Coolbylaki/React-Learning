@@ -7,7 +7,7 @@ function MainNavigation() {
 			<nav>
 				<ul className={classes.list}>
 					<li>
-						<NavLink to="/" className={({ isActive }) => (isActive ? classes.active : undefined)}>
+						<NavLink to="/" className={({ isActive }) => (isActive ? classes.active : undefined)} end>
 							Home
 						</NavLink>
 					</li>
