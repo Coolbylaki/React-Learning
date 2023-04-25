@@ -5,7 +5,7 @@ const HomePage = () => {
 
 	// Navigate programmatically
 	const navigateHandler = () => {
-		navigate("/products");
+		navigate("products");
 	};
 
 	return (
