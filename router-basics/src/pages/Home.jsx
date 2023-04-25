@@ -1,7 +1,19 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
-	return <h1>My Home Page!</h1>;
+	const navigate = useNavigate();
+
+	// Navigate programmatically
+	const navigateHandler = () => {
+		navigate("/products");
+	};
+
+	return (
+		<>
+			<h1>My Home Page!</h1>
+			<button onClick={navigateHandler}>Navigate</button>
+		</>
+	);
 };
 
 export default HomePage;
