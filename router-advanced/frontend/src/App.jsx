@@ -1,10 +1,21 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Home, LayoutRoot, EventRoot, EditEvent, EventDetail, NewEvent, EventsPage, eventsLoader } from "./pages";
+import {
+	Home,
+	LayoutRoot,
+	EventRoot,
+	EditEvent,
+	EventDetail,
+	NewEvent,
+	EventsPage,
+	eventsLoader,
+	ErrorPage,
+} from "./pages";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <LayoutRoot />,
+		errorElement: <ErrorPage />,
 		children: [
 			{
 				index: true,
