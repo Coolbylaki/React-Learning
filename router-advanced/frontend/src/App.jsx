@@ -9,6 +9,7 @@ import {
 	EventsPage,
 	eventsLoader,
 	ErrorPage,
+	eventDetailsLoader,
 } from "./pages";
 
 const router = createBrowserRouter([
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
 						loader: eventsLoader,
 					},
 					{ path: "new", element: <NewEvent /> },
-					{ path: ":eventId", element: <EventDetail /> },
+					{ path: ":eventId", element: <EventDetail />, loader: eventDetailsLoader },
 					{ path: ":eventId/edit", element: <EditEvent /> },
 				],
 			},
