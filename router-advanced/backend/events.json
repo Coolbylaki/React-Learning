@@ -1,11 +1,1 @@
-{
-	"events": [
-		{
-			"id": "e1",
-			"title": "A dummy event",
-			"date": "2023-02-22",
-			"image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-			"description": "Join this amazing event and connect with fellow developers."
-		}
-	]
-}
+{"events":[{"title":"Campground 2","image":"https://www.switchbacktravel.com/sites/default/files/articles%20/Camping%20tent%20%28REI%20Co-op%20Base%20Camp%206%20m%29.jpg","date":"2023-05-04","description":"Testing two","id":"3fdabb4c-7a6c-4ac1-803d-579a132ee155"},{"title":"Campground","image":"https://www.switchbacktravel.com/sites/default/files/articles%20/Camping%20tent%20%28REI%20Co-op%20Base%20Camp%206%20m%29.jpg","date":"2023-05-25","description":"Testing description","id":"7475357d-f05a-458e-83bc-7a2ef0599e6c"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}

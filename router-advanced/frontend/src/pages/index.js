@@ -3,6 +3,6 @@ export { default as LayoutRoot } from "./Root";
 export { default as EventRoot } from "./EventsRoot";
 export { default as EditEvent } from "./EditEvent";
 export { default as EventDetail, loader as eventDetailsLoader } from "./EventDetail";
-export { default as NewEvent } from "./NewEvent";
+export { default as NewEvent, action as newEventAction } from "./NewEvent";
 export { default as EventsPage, loader as eventsLoader } from "./Events";
 export { default as ErrorPage } from "./Error";
