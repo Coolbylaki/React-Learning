@@ -5,10 +5,11 @@ let listeners = [];
 let actions = {};
 
 export const useStore = () => {
+	// eslint-disable-next-line no-unused-vars
 	const [state, setState] = useState(globalState);
 
-	const dispatch = (actionIdentifier) => {
-		const newState = actions[actionIdentifier](globalState);
+	const dispatch = (actionIdentifier, payload) => {
+		const newState = actions[actionIdentifier](globalState, payload);
 		globalState = { ...globalState, ...newState };
 
 		for (const listener of listeners) {
