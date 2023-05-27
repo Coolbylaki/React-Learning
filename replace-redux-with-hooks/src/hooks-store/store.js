@@ -4,7 +4,7 @@ let globalState = {};
 let listeners = [];
 let actions = {};
 
-export const useStore = () => {
+export const useStore = (shouldListen = true) => {
 	// eslint-disable-next-line no-unused-vars
 	const [state, setState] = useState(globalState);
 
@@ -18,12 +18,16 @@ export const useStore = () => {
 	};
 
 	useEffect(() => {
-		listeners.push(setState);
+		if (shouldListen) {
+			listeners.push(setState);
+		}
 
 		return () => {
-			listeners = listeners.filter((listener) => listener !== setState);
+			if (shouldListen) {
+				listeners = listeners.filter((listener) => listener !== setState);
+			}
 		};
-	}, []);
+	}, [shouldListen]);
 
 	return [globalState, dispatch];
 };
