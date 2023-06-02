@@ -50,3 +50,25 @@ let course: string | number = "React - The Complete Guide";
 
 // course = 1235; can't because it's already set to :string
 course = 12345; // Now it can because of union type
+
+// Functions & types
+
+function add(a: number, b: number) {
+	return a + b;
+}
+
+function printOutput(value: any): void {
+	console.log(value);
+}
+
+// Generics
+
+function insertAtBeginning<T>(array: T[], value: T) {
+	const newArray = [value, ...array];
+	return newArray;
+}
+
+const demoArray = [1, 2, 3];
+
+const updatedArray = insertAtBeginning(demoArray, -1); // [-1, 1, 2, 3]
+const stringArray = insertAtBeginning(["a", "b", "c"], "d"); // [a, b, c, d]
