@@ -1,14 +1,15 @@
 import Todo from "../models/todo";
+import TodoItem from "./TodoItem";
 
-type Todos = {
+type Props = {
 	items: Todo[];
 };
 
-const Todos = ({ items }: Todos) => {
+const Todos = ({ items }: Props) => {
 	return (
 		<ul>
 			{items.map((item) => (
-				<li key={item.id}>{item.text}</li>
+				<TodoItem key={item.id} text={item.text} />
 			))}
 		</ul>
 	);
