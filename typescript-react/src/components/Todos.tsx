@@ -5,13 +5,18 @@ import styles from "./Todos.module.css";
 
 type Props = {
 	items: Todo[];
+	onRemoveTodo: (id: string) => void;
 };
 
-const Todos = ({ items }: Props) => {
+const Todos = ({ items, onRemoveTodo }: Props) => {
 	return (
 		<ul className={styles.todos}>
 			{items.map((item) => (
-				<TodoItem key={item.id} text={item.text} />
+				<TodoItem
+					key={item.id}
+					text={item.text}
+					onRemoveTodo={onRemoveTodo.bind(null, item.id)}
+				/>
 			))}
 		</ul>
 	);
