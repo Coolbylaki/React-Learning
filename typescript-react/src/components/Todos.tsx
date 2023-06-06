@@ -1,9 +1,13 @@
-const Todos = () => {
+type Todos = {
+	items: string[];
+};
+
+const Todos = ({ items }: Todos) => {
 	return (
 		<ul>
-			<li>Learn React</li>
-			<li>Learn Next.js</li>
-			<li>Learn TypeScript</li>
+			{items.map((item) => (
+				<li key={item}>{item}</li>
+			))}
 		</ul>
 	);
 };
